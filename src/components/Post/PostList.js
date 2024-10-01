@@ -186,14 +186,14 @@ const PostList = () => {
                   {expandedPostIds[post.id] ? "Show Less" : "Show More"}
                 </Button>
               )}
-              <Box>
+              <Box style={{ margin: "20px 0" }}>
                 <AddCommentIcon
                   onClick={() => handleAddCommentClick(post.id)}
                   style={{ cursor: "pointer" }}
                 />
               </Box>
               {currentPostId === post.id && (
-                <Box>
+                <Box style={{ marginBottom: "30px", marginTop: "20px" }}>
                   <TextField
                     variant="outlined"
                     sx={{ width: "100%" }}
@@ -204,6 +204,7 @@ const PostList = () => {
                   <Button
                     variant="contained"
                     color="primary"
+                    style={{ marginTop: "10px" }}
                     onClick={() => handlePostComment(post.id)}
                   >
                     Post Comment
